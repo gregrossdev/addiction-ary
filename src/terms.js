@@ -3948,6 +3948,7 @@ export const terms = [
     definitions: [
       "Negative memory of a past experience that’s replayed in the mind, with the same degree of feeling and emotional intensity, on the day the event happened. ",
       "Being re-sent to a past moment, because a current experience feels similar or the same as a past one. ",
+      "The reliving, and inevitable retelling, of a past event, good/bad/indifferent, to the extent that ego/the mind prevents framing the event in a way that aligns with present day reality/values." 
     ],
   },
   {
