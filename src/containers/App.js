@@ -1,20 +1,13 @@
 import React, { useState, useEffect } from "react";
 import CardList from "../components/CardList";
 import SearchBox from "../components/SearchBox";
-import { terms } from "../terms";
+import sanityClient from "../sanityClient";
+// import { terms } from "../terms";
 import "./App.css";
 
 function App() {
-  // const [robots, setRobots] = useState([]);
+  const [terms, setTerms] = useState([]);
   const [searchfield, setSearchfield] = useState("");
-
-  // useEffect(() => {
-  //   fetch("https://jsonplaceholder.typicode.com/users")
-  //     .then((response) => response.json())
-  //     .then((users) => {
-  //       setRobots(users);
-  //     });
-  // }, []);
 
   const onSearchChange = (event) => {
     setSearchfield(event.target.value);
@@ -23,6 +16,20 @@ function App() {
   const filteredTerms = terms.filter((term) => {
     return term.term.toLowerCase().includes(searchfield.toLowerCase());
   });
+
+  useEffect(() => {
+    sanityClient.fetch(
+        `
+        *[_type == "terms"] | order(term asc) {
+          term,
+          definitions[]
+        }
+`
+      ).then((data) =>  {
+        setTerms(data) 
+        console.log(data)
+      }).catch(console.error);
+  }, []);
 
   return (
     <main>
