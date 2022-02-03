@@ -6,6 +6,6 @@ A book of terms, with down to earth meanings, that you might find pretty useful,
 
 ## Purpose 
 
-Collaboration with [Seiho Morris](https://www.mentorgarden.org/about). 
+[Seiho Morris](https://www.mentorgarden.org/about). 
 
-This is an invaluable resource for any individual in long term recovery. We made it searchable. Hope you find it useful. 
+An invaluable resource for anyone in long term recovery. And its now searchable!  
