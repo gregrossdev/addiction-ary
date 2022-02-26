@@ -2,13 +2,6 @@
   background: var(--clr-dark);
 }
 
-@media only screen and (min-width: 768px) { 
-  .header {
-    border-radius: 1rem 1rem 0 0; 
-  }
-}
-
-
 .content {
   display: flex;
   flex-direction: column;
@@ -22,5 +15,16 @@
 .description {
   margin: 0;
   margin-bottom: 1em;
-  width: 93%;
 }
+
+@media only screen and (min-width: 768px) { 
+  .header {
+    border-radius: 1rem 1rem 0 0; 
+  }
+
+  .description {
+    width: 93%;
+  }
+}
+
+
