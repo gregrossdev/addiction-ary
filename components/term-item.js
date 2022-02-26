@@ -1,10 +1,11 @@
-import React from 'react';
+import Card from './ui-card'
+import termStyle from './term-item.module.css'
 
-const Card = ({ term, definitions }) => {
+export default function TermItem ({ term, definitions }) {
   return (
-    <article className="term">
+    <Card>
       <h2>{term}</h2>
-      <ul>
+      <ul className={termStyle.ul}>
         {definitions.map(definition => {
           return (
             <li>
@@ -13,8 +14,6 @@ const Card = ({ term, definitions }) => {
           )
         })}
       </ul>
-    </article>
+    </Card>
   );
 }
-
-export default Card;

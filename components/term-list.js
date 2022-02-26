@@ -1,16 +1,17 @@
 import React from 'react';
-import Card from './Card';
+import TermItem from './term-item';
+import termlist from './term-list.module.css'
 
 
-const CardList = ({ terms }) => {
+export default function TermList({ terms }){
 
   return (
-    <div className="letters">
+    <div className={termlist.letters}>
       
       {
         terms.map(term => {
           return (
-            <Card
+            <TermItem
               key={term}
               term={term.term}
               definitions={term.definitions}
@@ -22,5 +23,3 @@ const CardList = ({ terms }) => {
     </div>
   );
 }
-
-export default CardList;
