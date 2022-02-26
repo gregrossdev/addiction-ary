@@ -1,7 +1,13 @@
 .header {
   background: var(--clr-dark);
-  border-radius: 1rem 1rem 0 0; 
 }
+
+@media only screen and (min-width: 768px) { 
+  .header {
+    border-radius: 1rem 1rem 0 0; 
+  }
+}
+
 
 .content {
   display: flex;
