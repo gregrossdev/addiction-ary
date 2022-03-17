@@ -12,7 +12,7 @@ export default function TermList({ terms }){
         terms.map(term => {
           return (
             <TermItem
-              key={term}
+              key={term.term}
               term={term.term}
               definitions={term.definitions}
               />
