@@ -4,6 +4,17 @@ import SearchBox from "../components/search-box";
 
 import { getAllTerms } from "../lib/api-util";
 
+export async function getStaticProps() {
+  const data = await getAllTerms();
+
+  return {
+    props: {
+      data,
+    },
+    revalidate: 1800,
+  };
+}
+
 export default function Home({ data }) {
   const [terms, setTerms] = useState(data);
   const [searchfield, setSearchfield] = useState("");
@@ -34,13 +45,4 @@ export default function Home({ data }) {
   );
 }
 
-export async function getStaticProps() {
-  const data = await getAllTerms();
 
-  return {
-    props: {
-      data,
-    },
-    revalidate: 1800,
-  };
-}

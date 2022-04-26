@@ -8,7 +8,7 @@ export default function TermItem ({ term, definitions }) {
       <ul className={termStyle.ul}>
         {definitions.map(definition => {
           return (
-            <li>
+            <li key={definition}>
               {definition}
             </li>
           )
