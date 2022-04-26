@@ -58,11 +58,11 @@ html {
 }
 
 .header {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .content {
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 
@@ -93,5 +93,13 @@ html {
 
   .description {
     width: 93%;
+  }
+
+  .header {
+    padding: 2rem;
+  }
+  
+  .content {
+    padding: 0 2rem;
   }
 }
