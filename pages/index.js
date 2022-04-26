@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import TermList from "../components/term-list";
 import SearchBox from "../components/search-box";
-import nav from "../styles/layout-nav.module.css"
 
 import { getAllTerms } from "../lib/api-util";
 
@@ -19,18 +18,16 @@ export default function Home({ data }) {
 
   return (
     <div className="container">
-      <header className={`${nav.header} inner`}>
-        <div className={nav.content}>
-          <h1 className={nav.title}>Addictionary</h1>
-          <p className={nav.description}>
-            A book of terms, with down to earth meanings, that you might find
-            pretty useful, for connecting what’s going on outside, with what’s
-            happening inside.
-          </p>
-          <SearchBox searchChange={onSearchChange} />
-        </div>
+      <header className="header">
+        <h1 className="title">Addictionary</h1>
+        <p className="description">
+          A book of terms, with down to earth meanings, that you might find
+          pretty useful, for connecting what’s going on outside, with what’s
+          happening inside.
+        </p>
+        <SearchBox searchChange={onSearchChange} />
       </header>
-      <section className="inner content">
+      <section className="content">
         <TermList terms={filteredTerms} />
       </section>
     </div>

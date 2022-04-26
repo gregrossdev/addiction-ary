@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
 
 :root {
-  --clr-light: #f0d0d0;
-  --clr-dark: #dbc6c6;
+  --ui: #f7fdfc;
 }
 
 
@@ -12,7 +11,7 @@ body {
   margin: 0;
   font-family: 'Arvo', serif;
   line-height: 1.5;
-  background-color: rgb(44, 43, 43); 
+  background-color: #ecf7f5; 
 }
 
 
@@ -52,13 +51,31 @@ html {
   box-shadow:  0px 0px 12px 2px rgb(143, 140, 140);
 }
 
-.inner {
-  padding: 2rem 1rem;
+
+.header, .content {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 2rem;
 }
 
 .content {
-  background: var(--clr-light);
+  padding: 0 2rem;
 }
+
+
+.title {
+  margin: 0;
+  margin-bottom: 0.25em;
+}
+
+.description {
+  margin: 0;
+  margin-bottom: 1em;
+}
+
 
 @media only screen and (min-width: 768px) {
   .container {
@@ -70,14 +87,11 @@ html {
     box-shadow:  0px 0px 12px 2px rgb(143, 140, 140);
   }
 
-  .inner {
-    padding: 2rem;
-  }
-
-  .content {
+  .header, .content {
     border-radius: 0 0 1rem 1rem; 
   }
-  
+
+  .description {
+    width: 93%;
+  }
 }
-
-
